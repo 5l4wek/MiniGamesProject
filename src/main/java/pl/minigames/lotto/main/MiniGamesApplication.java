@@ -1,4 +1,6 @@
-package pl.minigames;
+package pl.minigames.lotto.main;
+
+import pl.minigames.lotto.logic.RandomNumberGenerator;
 
 public class MiniGamesApplication {
     public static void main(String[] args) {
