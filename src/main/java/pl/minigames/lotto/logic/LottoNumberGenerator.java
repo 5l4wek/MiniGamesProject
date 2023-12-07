@@ -1,6 +1,6 @@
 package pl.minigames.lotto.logic;
 
-public class RandomNumberGenerator {
+public class LottoNumberGenerator {
     public Double generateRandomNumber() {
         return Math.random();
     }
