@@ -1,13 +1,13 @@
-package pl.minigames.lotto.inset;
+package pl.minigames.game.lotto.inset;
 
-import pl.minigames.lotto.message.LottoMessage;
+import pl.minigames.game.lotto.message.LottoMessage;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static pl.minigames.lotto.controller.LottoGameController.*;
+import static pl.minigames.game.lotto.controller.LottoGameController.*;
 
 public class LottoInsetFromUser {
 

@@ -1,4 +1,4 @@
-package pl.minigames;
+package pl.minigames.game.lotto;
 
 import pl.minigames.model.GameResult;
 

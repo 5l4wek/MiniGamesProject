@@ -1,6 +1,7 @@
-package pl.minigames.lotto.controller;
+package pl.minigames.game.lotto.controller;
 
 public class LottoGameController {
+
     public static final int GENERATED_NUMBERS = 6;
     public static final int UNIQUE_NUMBER = 1;
     public static final int TOTAL_NUMBERS = 100;

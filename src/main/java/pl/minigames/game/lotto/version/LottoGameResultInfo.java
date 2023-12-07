@@ -1,7 +1,7 @@
-package pl.minigames.lotto.version;
+package pl.minigames.game.lotto.version;
 
 import lombok.Data;
-import pl.minigames.lotto.message.LottoMessage;
+import pl.minigames.game.lotto.message.LottoMessage;
 import pl.minigames.model.GameResultInfo;
 
 import java.util.Set;

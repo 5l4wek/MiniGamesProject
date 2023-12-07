@@ -1,4 +1,4 @@
-package pl.minigames.lotto.message;
+package pl.minigames.game.lotto.message;
 
 public class LottoMessage {
 
