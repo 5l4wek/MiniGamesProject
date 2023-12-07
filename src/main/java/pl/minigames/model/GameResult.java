@@ -6,6 +6,6 @@ import pl.minigames.Game;
 @Data
 public class GameResult {
     private final Game game;
-    private final GameInfo gameInfo;
+    private final GameResultInfo gameResultInfo;
 
 }
