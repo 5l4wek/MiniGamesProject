@@ -1,5 +1,7 @@
 package pl.minigames;
 
-public interface Game {
+import pl.minigames.model.GameResult;
 
+public interface Game {
+    GameResult startGame();
 }

@@ -10,6 +10,7 @@ import java.util.Set;
 import static pl.minigames.lotto.controller.LottoGameController.*;
 
 public class LottoInsetFromUser {
+
     public Set<Integer> getRandomNumbers(Scanner scanner) {
         Set<Integer> numbersFromUser = getNumbersFromUser(scanner);
         scanner.close();
