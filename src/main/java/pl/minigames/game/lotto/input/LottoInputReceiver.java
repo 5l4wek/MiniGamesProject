@@ -1,4 +1,4 @@
-package pl.minigames.game.lotto.inset;
+package pl.minigames.game.lotto.input;
 
 import pl.minigames.game.lotto.message.LottoMessage;
 
@@ -9,7 +9,7 @@ import java.util.Set;
 
 import static pl.minigames.game.lotto.controller.LottoGameController.*;
 
-public class LottoInsetFromUser {
+public class LottoInputReceiver {
 
     public Set<Integer> getRandomNumbers(Scanner scanner) {
         Set<Integer> numbersFromUser = getNumbersFromUser(scanner);

@@ -1,7 +1,7 @@
 package pl.minigames.game.lotto.version;
 
 import lombok.Data;
-import pl.minigames.game.lotto.inset.LottoInsetFromUser;
+import pl.minigames.game.lotto.input.LottoInputReceiver;
 import pl.minigames.game.lotto.logic.LottoHitNumberCalculator;
 import pl.minigames.game.lotto.message.LottoMessage;
 import pl.minigames.game.lotto.Game;
@@ -14,7 +14,7 @@ import java.util.Set;
 
 @Data
 public class LottoGame implements Game {
-    private final LottoInsetFromUser lottoInsetFromUser;
+    private final LottoInputReceiver lottoInputReceiver;
     private final LottoRandomGenerator randomGenerator;
     private final LottoHitNumberCalculator lottoHitNumberCalculator;
     private final Scanner scanner;
@@ -26,7 +26,7 @@ public class LottoGame implements Game {
     }
 
     private GameResultInfo getHitNumbers() {
-        final Set<Integer> inputNumbers = lottoInsetFromUser.getRandomNumbers(scanner);
+        final Set<Integer> inputNumbers = lottoInputReceiver.getRandomNumbers(scanner);
         final Set<Integer> randomNumbers = randomGenerator.getRandomSixNumbers();
         return lottoHitNumberCalculator.getHitNumbers(inputNumbers, randomNumbers);
     }
