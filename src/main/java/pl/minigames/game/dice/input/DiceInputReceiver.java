@@ -2,39 +2,45 @@ package pl.minigames.game.dice.input;
 
 import pl.minigames.game.dice.messageprovider.DiceMessageProvider;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
+import static pl.minigames.game.dice.messageprovider.DiceMessageProvider.*;
 
 public class DiceInputReceiver {
-    public Set<Integer> getSixNumbersTwice(Scanner scanner) {
-        Set<Integer> givenNumbersFromUser = getNumbersFromRollDice(scanner);
-        scanner.close();
-        return givenNumbersFromUser;
+    public static void main(String[] args) {
+        playDiceGame();
     }
 
-    private Set<Integer> getNumbersFromRollDice(Scanner in) {
+    public static void playDiceGame() {
 
-        final Set<Integer> givenNumbersFromFirstDie = new HashSet<>();
-        final Set<Integer> givenNumbersFromSecondDie = new HashSet<>();
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        System.out.println(String.format(DiceMessageProvider.ROLL_TWO_DICE));
+        System.out.println(DiceMessageProvider.GAME_NAME);
 
-        if (givenNumbersFromFirstDie == givenNumbersFromSecondDie) {
-            System.out.println(DiceMessageProvider.DICE_WON_RESULT);
-        }
-        if (givenNumbersFromFirstDie != givenNumbersFromFirstDie) {
-            System.out.println(DiceMessageProvider.TWO_MORE_TRY);
-        }
-        if (givenNumbersFromFirstDie != givenNumbersFromSecondDie) {
-            System.out.println(DiceMessageProvider.ONE_MORE_TRY);
-        }
-        if (givenNumbersFromFirstDie != givenNumbersFromSecondDie) {
-            System.out.println(DiceMessageProvider.DICE_LOSE_RESULT);
-        }
+        for (int attempt = 1; attempt <= 3; attempt++) {
 
-        return Collections.emptySet();
+            System.out.println(DiceMessageProvider.ROLL_THE_DICE);
+            scanner.nextLine();
+
+            int firstDice = rollDice(random);
+            int secondDice = rollDice(random);
+
+            System.out.println(DICE_ONE + firstDice);
+            System.out.println(DICE_TWO + secondDice);
+
+            if (firstDice == secondDice) {
+                System.out.println(DiceMessageProvider.DICE_WON_RESULT);
+                break;
+            } else {
+                System.out.println(DiceMessageProvider.DICE_LOSE_RESULT);
+            }
+        }
+        System.out.println(DICE_GAME_OVER);
+    }
+
+    private static int rollDice(Random random) {
+        return random.nextInt(6) + 1;
     }
 }
 

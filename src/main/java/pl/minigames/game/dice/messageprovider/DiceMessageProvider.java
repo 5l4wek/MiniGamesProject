@@ -2,13 +2,14 @@ package pl.minigames.game.dice.messageprovider;
 
 public class DiceMessageProvider {
 
-    public static final String GAME_NAME = "Dice";
-    public static final String GAME_S_STARTED = "Game %s started";
-    public static final String ROLL_TWO_DICE = "Please roll two dice";
-    public static final String TWO_MORE_TRY = "You have 2 more try";
-    public static final String ONE_MORE_TRY = "You have 1 more try";
-    public static final String DICE_WON_RESULT = "You didnt hit two the same numbers";
-    public static final String DICE_LOSE_RESULT = "Congratulations, You hit two the same numbers ! ";
+    public static final String GAME_NAME = "Welcome to the Dice Game";
+    public static final String DICE_ONE = "First Dice: ";
+    public static final String DICE_TWO = "Second Dice: ";
+    public static final String ROLL_THE_DICE = "Press enter to roll the dice ";
+    public static final String ATTEMPT = "\nAttempt ";
+    public static final String DICE_WON_RESULT = "Congratulations, You won !";
+    public static final String DICE_LOSE_RESULT = "No match ";
+    public static final String DICE_GAME_OVER = "\nGame Over. Thank you for playing";
 
 
     private DiceMessageProvider() {
