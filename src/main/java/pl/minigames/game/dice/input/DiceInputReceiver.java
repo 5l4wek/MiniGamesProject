@@ -7,11 +7,14 @@ import java.util.*;
 import static pl.minigames.game.dice.messageprovider.DiceMessageProvider.*;
 
 public class DiceInputReceiver {
-    public void main(String[] args) {
-        playDiceGame();
+
+    public Set<Integer> getSixNumbers(Scanner scanner) {
+        Set<Integer> givenNumbersFromUser = getNumbersFromRollTheDice();
+        scanner.close();
+        return givenNumbersFromUser;
     }
 
-    public void playDiceGame() {
+    public Set<Integer> getNumbersFromRollTheDice() {
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -37,6 +40,7 @@ public class DiceInputReceiver {
             }
         }
         System.out.println(DICE_GAME_OVER);
+        return null;
     }
 
     public int rollDice(Random random) {
