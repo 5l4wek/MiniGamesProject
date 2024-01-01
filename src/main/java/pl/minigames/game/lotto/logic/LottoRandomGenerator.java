@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static pl.minigames.game.lotto.controller.LottoGameController.*;
+import static pl.minigames.game.lotto.config.LottoGameConfiguration.*;
 
 public class LottoRandomGenerator {
     public Set<Integer> getRandomSixNumbers() {

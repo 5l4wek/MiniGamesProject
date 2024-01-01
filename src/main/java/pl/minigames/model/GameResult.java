@@ -1,7 +1,7 @@
 package pl.minigames.model;
 
 import lombok.Data;
-import pl.minigames.game.lotto.Game;
+import pl.minigames.game.Game;
 
 @Data
 public class GameResult {

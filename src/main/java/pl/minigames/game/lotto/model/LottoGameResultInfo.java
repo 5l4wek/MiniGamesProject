@@ -1,7 +1,7 @@
-package pl.minigames.game.lotto.version;
+package pl.minigames.game.lotto.model;
 
 import lombok.Data;
-import pl.minigames.game.lotto.message.LottoMessage;
+import pl.minigames.game.lotto.messageprovider.LottoMessageProvider;
 import pl.minigames.model.GameResultInfo;
 
 import java.util.Set;
@@ -15,6 +15,6 @@ public class LottoGameResultInfo implements GameResultInfo {
 
     @Override
     public String getGameResultMessage() {
-        return String.format(LottoMessage.GAME_RESULT, finalHitNumbers.size(), randomSixNumbers, userGivenNumbers);
+        return String.format(LottoMessageProvider.GAME_RESULT, finalHitNumbers.size(), randomSixNumbers, userGivenNumbers);
     }
 }

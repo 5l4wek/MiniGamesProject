@@ -1,10 +1,10 @@
 package pl.minigames;
 
-import pl.minigames.game.lotto.Game;
+import pl.minigames.game.Game;
 import pl.minigames.game.lotto.input.LottoInputReceiver;
 import pl.minigames.game.lotto.logic.LottoHitNumberCalculator;
 import pl.minigames.game.lotto.logic.LottoRandomGenerator;
-import pl.minigames.game.lotto.version.LottoGame;
+import pl.minigames.game.lotto.LottoGame;
 
 import java.util.Scanner;
 

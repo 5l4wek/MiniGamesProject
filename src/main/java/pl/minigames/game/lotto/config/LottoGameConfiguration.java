@@ -1,6 +1,6 @@
-package pl.minigames.game.lotto.controller;
+package pl.minigames.game.lotto.config;
 
-public class LottoGameController {
+public class LottoGameConfiguration {
 
     public static final int GENERATED_NUMBERS = 6;
     public static final int UNIQUE_NUMBER = 1;
@@ -9,7 +9,7 @@ public class LottoGameController {
     public static final int HIGHEST_NUMBER = 99;
     public static final int TOTAL_FROM_USER = 6;
 
-    private LottoGameController() {
+    private LottoGameConfiguration() {
 
     }
 }

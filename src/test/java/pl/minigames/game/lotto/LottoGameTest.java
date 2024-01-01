@@ -3,10 +3,10 @@ package pl.minigames.game.lotto;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.minigames.game.Game;
 import pl.minigames.game.lotto.input.LottoInputReceiver;
 import pl.minigames.game.lotto.logic.LottoHitNumberCalculator;
 import pl.minigames.game.lotto.logic.LottoRandomGenerator;
-import pl.minigames.game.lotto.version.LottoGame;
 import pl.minigames.model.GameResult;
 
 import java.util.*;

@@ -1,13 +1,13 @@
 package pl.minigames.game.lotto.input;
 
-import pl.minigames.game.lotto.message.LottoMessage;
+import pl.minigames.game.lotto.messageprovider.LottoMessageProvider;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static pl.minigames.game.lotto.controller.LottoGameController.*;
+import static pl.minigames.game.lotto.config.LottoGameConfiguration.*;
 
 public class LottoInputReceiver {
 
@@ -19,11 +19,11 @@ public class LottoInputReceiver {
 
     private Set<Integer> getNumbersFromUser(Scanner in) {
         final Set<Integer> givenNumbers = new HashSet<>();
-        System.out.println(String.format(LottoMessage.PASS_THE_NUMBERS, TOTAL_FROM_USER));
+        System.out.println(String.format(LottoMessageProvider.PASS_THE_NUMBERS, TOTAL_FROM_USER));
         while (areLessThanSixNumbersGiven(givenNumbers)) {
-            System.out.println(LottoMessage.TYPE_THE_NUMBER);
+            System.out.println(LottoMessageProvider.TYPE_THE_NUMBER);
             while (!in.hasNext()) {
-                System.out.printf(LottoMessage.NUMBER_NOT_IN_RANGE, LOWEST_NUMBER, HIGHEST_NUMBER);
+                System.out.printf(LottoMessageProvider.NUMBER_NOT_IN_RANGE, LOWEST_NUMBER, HIGHEST_NUMBER);
                 if (!in.hasNext()) {
                     return Collections.emptySet();
                 }
@@ -38,7 +38,7 @@ public class LottoInputReceiver {
         if (isInRange(userInput)) {
             givenNumbers.add(userInput);
         } else {
-            System.out.printf(LottoMessage.GIVEN_NUMBER_NOT_IN_RANGE, userInput, LOWEST_NUMBER, HIGHEST_NUMBER);
+            System.out.printf(LottoMessageProvider.GIVEN_NUMBER_NOT_IN_RANGE, userInput, LOWEST_NUMBER, HIGHEST_NUMBER);
         }
     }
 

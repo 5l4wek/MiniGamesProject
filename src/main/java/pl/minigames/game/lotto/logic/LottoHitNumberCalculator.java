@@ -1,6 +1,6 @@
 package pl.minigames.game.lotto.logic;
 
-import pl.minigames.game.lotto.version.LottoGameResultInfo;
+import pl.minigames.game.lotto.model.LottoGameResultInfo;
 
 import java.util.HashSet;
 import java.util.Set;
